@@ -30,5 +30,3 @@ function next_perfect(x::Int64, limit=Inf64)
     end
     return x
 end
-
-next_perfect(8129)
