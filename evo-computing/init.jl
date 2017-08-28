@@ -14,9 +14,18 @@ begin
 end
 =#
 
-type Algo
-    one :: Int64
-    two :: Char
+immutable Algo
+    one::Int64 = rand(1:100)
+
+    two::Char = rand('a':'z')
+end
+
+function new_individual()
+    base = "Algo("
+    fields = fieldnames(Algo)
+    for i in fields
+        print(i)
+    end
 end
 
 function make_pop()
@@ -35,5 +44,3 @@ function evo()
 end
 
 pop = evo();
-ex1 = parse("pop[1].one")
-eval(ex1)
