@@ -35,7 +35,7 @@ function words(letters, amount, regxp="")
     return all
 end
 
-input = "nlfity"
-filterby = Regex("...y")
-output = words(input, 2, filterby)
+input = "sueedf"
+filterby = Regex(".u...")
+output = words(input, 5, filterby)
 print(output)
